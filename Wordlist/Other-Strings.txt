@@ -1,3 +1,4 @@
+<input type=text name=cmd value=
 <title>Leaf PHPMailer</title>
 for="senderEmail"
 name="subject"

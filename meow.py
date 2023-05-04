@@ -57,29 +57,12 @@ except FileNotFoundError:
 
 
 
-Signs = 'wordlist/Shell-Strings.txt'
-with open(Signs) as f:
-    lines = f.readlines()
-
-Strings_Shells = 'wordlist/Shell-Strings.txt'
-with open(Strings_Shells) as f:
-    lines = f.readlines()
-
-Strings_Uploads = 'wordlist/Other-Strings.txt'
-with open(Strings_Uploads) as f:
-    lines = f.readlines()
-
-Locations = 'wordlist/Traversal.txt'
-with open(Locations) as f:
-    lines = f.readlines()
-
-
-
-
-
-TrustedFiles = 'wordlist/Trusted-Files.txt'
-with open(TrustedFiles) as f:
-    lines = f.readlines()
+with open('wordlist/Shell-Strings.txt', 'r') as f1, open('wordlist/Shell-Strings.txt', 'r') as f2, open('wordlist/Other-Strings.txt', 'r') as f3, open('wordlist/Traversal.txt', 'r') as f4, open('wordlist/Trusted-Files.txt', 'r') as f5:
+    Signs = f1.read().splitlines()
+    Strings_Shells = f2.read().splitlines()
+    Strings_Uploads = f3.read().splitlines()
+    Locations = f4.read().splitlines()
+    TrustedFiles = f5.read().splitlines()
 def URLdomain(site):
     if site.startswith("http://") :
         site = site.replace("http://","")

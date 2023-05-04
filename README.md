@@ -4,13 +4,10 @@
 ![Screenshot_1](https://user-images.githubusercontent.com/25004320/236211315-073a6d87-90d1-48e1-9273-efd94ef15293.png)
 ## Edit Our Custom Wordlist
 ```
-Line: 57 = SIGNS STRING
-Line: 61 = SHELL STRING
-Line: 64 = UPLOADER STRING
-Line: 67 = DIRECTORY
-
-If you want find some PHP Mailer, edit in
-Line: 65 = PHP/SMTP MAILER STRING
+Wordlist/Shell-Strings.txt = For Shell
+Wordlist/Traversal.txt = For Path/Dir
+Wordlist/Other-Strings.txt = For Mailer/Uploader
+Wordlist/Trusted-Files.txt = Namefile on current Target (Current Dir)
 ```
 ## Requirements
 - Python2.7

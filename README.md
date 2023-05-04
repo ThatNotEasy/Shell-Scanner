@@ -4,10 +4,10 @@
 ![Screenshot_1](https://user-images.githubusercontent.com/25004320/236211315-073a6d87-90d1-48e1-9273-efd94ef15293.png)
 ## Edit Our Custom Wordlist
 ```
-Wordlist/Shell-Strings.txt = For Shell
-Wordlist/Traversal.txt = For Path/Dir
-Wordlist/Other-Strings.txt = For Mailer/Uploader
-Wordlist/Trusted-Files.txt = Namefile on current Target (Current Dir)
+Wordlist/Shell-Strings.txt = Malicious Strings
+Wordlist/Traversal.txt = Traversal Path
+Wordlist/Other-Strings.txt = Mailer/Uploader Strings
+Wordlist/Trusted-Files.txt = Filename on current Target & Dir
 ```
 ## Requirements
 - Python2.7

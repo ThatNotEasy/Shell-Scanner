@@ -1,7 +1,7 @@
 ## Shell-Scanner
 - A shell scanner is a tool used to identify and detect malicious code, often referred to as a shell, that has been uploaded onto a web server. The tool works by searching through directories and files on the server for specific strings or paths that are commonly associated with malicious code.
 ## Screenshot
-
+![Screenshot_1](https://user-images.githubusercontent.com/25004320/236211315-073a6d87-90d1-48e1-9273-efd94ef15293.png)
 ## Edit Our Custom Wordlist
 ```
 Line: 57 = SIGNS STRING
@@ -29,3 +29,6 @@ $ python/python2 shell-scanner.py
 ## Author
 - Pari Malam
 ## Contacts
+[![Telegram](https://img.shields.io/badge/-Telegram-blue)](https://telegram.me/SurpriseMTFK)
+[![Discord](https://img.shields.io/badge/-Discord-purple)](https://discordapp.com/users/829404192585678858)
+[![Forum](https://img.shields.io/badge/-Forum-red)](https://dragonforce.io)

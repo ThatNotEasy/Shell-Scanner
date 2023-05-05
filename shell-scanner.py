@@ -18,12 +18,11 @@ fm  =   Fore.MAGENTA
 if not os.path.exists('Results'):
     os.mkdir('Results')
 
-os.system('clear' if os.name == 'posix' else 'cls')
-
 headers = {'Connection': 'keep-alive',
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'}
 
 def banners():
+    os.system('clear' if os.name == 'posix' else 'cls')
     stdout.write("                                                                                         \n")
     stdout.write(""+Fore.LIGHTRED_EX +"██████╗ ██████╗  █████╗  ██████╗  ██████╗ ███╗   ██╗███████╗ ██████╗ ██████╗  ██████╗███████╗   ██╗ ██████╗ \n")
     stdout.write(""+Fore.LIGHTRED_EX +"██╔══██╗██╔══██╗██╔══██╗██╔════╝ ██╔═══██╗████╗  ██║██╔════╝██╔═══██╗██╔══██╗██╔════╝██╔════╝   ██║██╔═══██╗\n")

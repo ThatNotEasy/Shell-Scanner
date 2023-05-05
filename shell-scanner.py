@@ -52,7 +52,7 @@ except FileNotFoundError:
 
 
 
-with open('wordlist/Shell-Strings.txt', 'r') as f1, open('wordlist/Shell-Strings.txt', 'r') as f2, open('wordlist/Other-Strings.txt', 'r') as f3, open('wordlist/Traversal.txt', 'r') as f4, open('wordlist/Trusted-Files.txt', 'r') as f5:
+with open('Wordlist/Shell-Strings.txt', 'r') as f1, open('Wordlist/Shell-Strings.txt', 'r') as f2, open('Wordlist/Other-Strings.txt', 'r') as f3, open('Wordlist/Traversal.txt', 'r') as f4, open('Wordlist/Trusted-Files.txt', 'r') as f5:
     Signs = f1.read().splitlines()
     Strings_Shells = f2.read().splitlines()
     Strings_Uploads = f3.read().splitlines()

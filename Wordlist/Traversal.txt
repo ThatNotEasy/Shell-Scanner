@@ -1,9 +1,17 @@
+/wordpress/
+/wordpress/wp-admin/
 /wp-content/uploads/
 /wp-includes/
 /wp-content/
 /wp-content/plugins/
 /wp-content/themes/
 /wp-admin/
+/wp-admin/network/
+/wp-admin/maint/
+/wp-content/plugins/theme-configurator/
+/wp-content/plugins/widget-logic/
+/wp-content/uploads/2023/04/
+/wp-content/themes/seotheme/
 /.well-known/
 /ALFA_DATA/
 /.well-known/pki-validation/
@@ -31,3 +39,8 @@
 /cgi-bin/
 /wordpress/wp-includes/
 /css/
+/tmp/
+/libraries/joomla/
+/sites/default/files/
+/images/stories/
+/wp-content/plugins/seoplugins/

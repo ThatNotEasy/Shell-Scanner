@@ -188,7 +188,7 @@ def Check_Backdoors(Respones,Sign):
 
 def Exploiter(site,Dirctorys):
     try:
-        url = "https://" + URLdomain(site)
+        url = "http://" + URLdomain(site)
 
         for Path in Dirctorys:
         
@@ -215,13 +215,16 @@ def Exploiter(site,Dirctorys):
                                 if any(Shells in Check_Backdoors(Request_Text,Shells) for Shells in Strings_Shells):
                                     print(FY + "[Shell-Scanner] -" + FG + "[W00T!]" + FW + url,_FirstFilePhP)
                                     open('Results/Shells.txt','a').write(url + _FirstFilePhP + "\n")
+                                    exit()
                                 elif any(ups in Check_Backdoors(Request_Text,ups) for ups in Strings_Uploads):
                                     print(FY + "[Shell-Scanner] -" + FG + "[W00T!]" + FW + url,_FirstFilePhP)
                                     open('Results/Others.txt','a').write(url + _FirstFilePhP + "\n")
+                                    exit()
                                 
                                 else:
                                     print(FY + "[Shell-Scanner] -" + FG + "[W00T!]" + FW + url,_FirstFilePhP)
                                     open('Results/Success.txt','a').write(url + _FirstFilePhP + "\n")
+                                    exit()
 
                             else:
                                 print(FY + "[Shell-Scanner] -" + FR + "[Not Found!]" + FW + url,_FirstFilePhP)
@@ -243,13 +246,16 @@ def Exploiter(site,Dirctorys):
                                             if any(Shells in Check_Backdoors(Request_Text,Shells) for Shells in Strings_Shells):
                                                 print(FY + "[Shell-Scanner] -" + FG + "[W00T!]" + FW + url,_NextFilePhP)
                                                 open('Results/Shells.txt','a').write(url + _NextFilePhP + "\n")
+                                                exit()
                                             elif any(ups in Check_Backdoors(Request_Text,ups) for ups in Strings_Uploads):
                                                 print(FY + "[Shell-Scanner] -" + FG + "[W00T!]" + FW + url,_NextFilePhP)
                                                 open('Results/Uploaders.txt','a').write(url + _NextFilePhP + "\n")
+                                                exit()
                                             
                                             else:
                                                 print(FY + "[Shell-Scanner] -" + FG + "[W00T!]" + FW + url,_NextFilePhP)
                                                 open('Results/Success.txt','a').write(url + _NextFilePhP + "\n")
+                                                exit()
                                                 
                                         else:
                                             print(FY + "[Shell-Scanner] -" + FR + "[Not Found!]" + FW + url,_NextFilePhP)
@@ -267,12 +273,14 @@ def CmsCheckers(site):
     try:
         
         
-        Exploiter(site,Locations)
+        Exploiter(site, Locations)
     
 
         
     except:
         pass
+
+
 
 
 mp = Pool(100)

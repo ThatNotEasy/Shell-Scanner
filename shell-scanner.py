@@ -6,7 +6,7 @@ from sys import stdout
 from multiprocessing.dummy import Pool
 from colorama import Fore, init
 init(autoreset=True)
-requests.urllib3.disable_warnings()
+delete_warning = urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 FR  =   Fore.RED
 FC  =   Fore.YELLOW
@@ -17,6 +17,21 @@ MEOW = 'Results'
 
 if not os.path.exists(MEOW):
     os.mkdir(MEOW)
+
+
+MEOWING = 'Wordlist/User-Agents.txt'
+
+with open(MEOWING, 'r') as f:
+    user_agents = [line.strip() for line in f.readlines()]
+
+headers = {
+    'User-Agent': random.choice(user_agents),
+    'Content-type': '*/*',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language': 'en-US,en;q=0.5',
+    'Connection': 'keep-alive'
+}
+
 
 def banners():
     os.system('clear' if os.name == 'posix' else 'cls')
@@ -47,18 +62,7 @@ except FileNotFoundError:
     exit('[!] File not found: ' + filename)
 
 
-MEOWING = 'Wordlist/User-Agents.txt'
 
-with open(MEOWING, 'r') as f:
-    user_agents = [line.strip() for line in f.readlines()]
-
-headers = {
-    'User-Agent': random.choice(user_agents),
-    'Content-type': '*/*',
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-    'Accept-Language': 'en-US,en;q=0.5',
-    'Connection': 'keep-alive'
-}
 
 with open('Wordlist/Shell-Strings.txt', 'r') as f1, open('Wordlist/Shell-Strings.txt', 'r') as f2, open('Wordlist/Other-Strings.txt', 'r') as f3, open('Wordlist/Traversals.txt', 'r') as f4, open('Wordlist/Trusted-Files.txt', 'r') as f5:
     Signs = f1.read().splitlines()

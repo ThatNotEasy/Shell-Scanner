@@ -5,7 +5,6 @@ exec
 uname -a
 proc_open
 preg_replace
-pcntl_exec
 file_put_contents
 file_get_contents
 eval()
@@ -16,7 +15,6 @@ PHPSESSID
 phpMyAdmin
 payload
 fopen
-popen
 require_once()
 symlink
 -rw-r--r--
@@ -41,7 +39,6 @@ gel4y
 Html404
 IndoXploit
 indoxploit
-input type="file"
 Jijle3
 Marijuana
 MARIJuANA
@@ -59,12 +56,39 @@ Tryag File Manager
 ubhteam
 #p@@#
 Vuln!! patch it Now!
+<title>Vuln!! patch it Now!</title>
+RxR HaCkEr
+X_Shell
+izocin
+NullBrain
+F0x
+iCloud1337 private shell
+xAttacker
+xleetshell
+xleet
+Dr HeX
 WebShellOrb
 WHY MINI SHELL
 Windows-1251
+WSO
+config root man
+olux
+Mr.Anderson
+Phenix-TN
+PHP Uploader
+<title>Legion</title>
 WSO 2.5
 WSO 2.6
 WSO 4.2.5
 WSO 5.0.0
 WSOX ENC
 xichang1
+United Bangladeshi Hackers
+[UNAME]:
+Html404
+JEMBOETS
+<title>IndoXploit</title>
+768776e296b6f286f2a72607e276b62666c6d286
+Andela1C3
+Shell Uploader
+//0x5a455553.github.io/MARIJUANA/icon.png

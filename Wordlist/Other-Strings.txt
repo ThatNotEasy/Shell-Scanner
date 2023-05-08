@@ -19,18 +19,16 @@ input type="submit" value=">>"
 <input type="file" name="file" size="50">
 <form action="" method="post" enctype="multipart/form-data" name="uploader" id="uploader">
 type="file"/><input type="submit"
-type="file"',"type='file'",'<input type="submit" value="ddok"/>
-value="goodit"/>
-input type="file"'
-type="file"/><input type="submit"
-type="file"',"type='file'",'<input type="submit" value="ddok"/>
+"type='file'
+<input type="submit" value="ddok"/>
 value="goodit"/>
 input type="file"
-'type="file"/><input type="submit"
-value="goodit"/>
-<input type="submit" value="ddok"/>
-type="file"
+type='file'
 type=\'file\'
 type= "file"
 Upload</a> ]</li><li>[
 pload</a><li><a>Sym
+<form action="" method="post"
+name="uploader" id="uploader">
+size="50"><input name="_upl"
+type="submit" id="_upl" value="

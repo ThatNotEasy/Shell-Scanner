@@ -28,4 +28,9 @@ value="goodit"/>
 input type="file"
 'type="file"/><input type="submit"
 value="goodit"/>
-<input type="submit" value="ddok"/>'
+<input type="submit" value="ddok"/>
+type="file"
+type=\'file\'
+type= "file"
+Upload</a> ]</li><li>[
+pload</a><li><a>Sym

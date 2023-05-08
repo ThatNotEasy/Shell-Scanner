@@ -13,6 +13,9 @@
 /wp-content/plugins/widget-logic/
 /wp-content/uploads/2023/04/
 /wp-content/themes/seotheme/
+/wp-content/uploads/typehub/custom/
+/wp-content/plugins/indeed-membership-pro/
+/wp-content/plugins/augmented-reality/file_manager/
 /.well-known/
 /ALFA_DATA/
 /.well-known/pki-validation/

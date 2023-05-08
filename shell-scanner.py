@@ -43,7 +43,7 @@ def banners():
 banners()
 
 
-filename = raw_input("\n" + Fore.RED + "[+] " + Fore.YELLOW + "IPs/Domain List: " + Fore.WHITE)
+filename = raw_input("\n" + Fore.RED + "[+] " + Fore.YELLOW + "IP/DOMAIN LIST: " + Fore.WHITE)
 
 try:
     target = [i.strip() for i in open(filename, mode='r').readlines()]

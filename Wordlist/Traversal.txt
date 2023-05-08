@@ -6,6 +6,7 @@
 /wp-content/plugins/
 /wp-content/themes/
 /wp-admin/
+/wp-admin/css/
 /wp-admin/network/
 /wp-admin/maint/
 /wp-content/plugins/theme-configurator/
@@ -44,3 +45,4 @@
 /sites/default/files/
 /images/stories/
 /wp-content/plugins/seoplugins/
+/wp-admin/css/colors/

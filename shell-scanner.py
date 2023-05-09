@@ -7,11 +7,9 @@ import re
 import colorama
 import requests
 import urllib3
-
 from multiprocessing.dummy import Pool
 from sys import stdout
 from colorama import Fore, init
-
 init(autoreset=True)
 delete_warning = urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -26,6 +24,16 @@ MEOW = 'Results'
 
 if not os.path.exists(MEOW):
     os.mkdir(MEOW)
+    
+    
+headers = {
+    'User-Agent': random.choice(user_agents),
+    'Content-type': '*/*',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language': 'en-US,en;q=0.5',
+    'Connection': 'keep-alive'
+}
+
 
 def banners():
     os.system('clear' if os.name == 'posix' else 'cls')
@@ -54,30 +62,17 @@ try:
     target = [i.strip() for i in open(filename, mode='r').readlines()]
 except FileNotFoundError:
     exit('[!] File not found: ' + filename)
-
-
-MEOWING = 'Wordlist/User-Agents.txt'
-
-with open(MEOWING, 'r') as f:
-    user_agents = [line.strip() for line in f.readlines()]
-
-headers = {
-    'User-Agent': random.choice(user_agents),
-    'Content-type': '*/*',
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-    'Accept-Language': 'en-US,en;q=0.5',
-    'Connection': 'keep-alive'
-}
-
-
-
-
-with open('Wordlist/Shell-Strings.txt', 'r') as f1, open('Wordlist/Shell-Strings.txt', 'r') as f2, open('Wordlist/Other-Strings.txt', 'r') as f3, open('Wordlist/Traversals.txt', 'r') as f4, open('Wordlist/Trusted-Files.txt', 'r') as f5:
+    
+    
+    
+    
+with open('Wordlist/Shell-Strings.txt', 'r') as f1, open('Wordlist/Shell-Strings.txt', 'r') as f2, open('Wordlist/Other-Strings.txt', 'r') as f3, open('Wordlist/Traversals.txt', 'r') as f4, open('Wordlist/Trusted-Files.txt', 'r') as f5, open('Wordlist/User-Agents.txt', 'r') as f:
     Signs = f1.read().splitlines()
     Strings_Shells = f2.read().splitlines()
     Strings_Uploads = f3.read().splitlines()
     Locations = f4.read().splitlines()
     TrustedFiles = f5.read().splitlines()
+    user_agents = [line.strip() for line in f.readlines()]
 def URLdomain(site):
     if site.startswith("http://") :
         site = site.replace("http://","")
@@ -225,22 +220,21 @@ def Exploiter(site,Dirctorys):
 
                             if any(Sign in Check_Backdoors(Request_Text,Sign) for Sign in Signs):
                                 if any(Shells in Check_Backdoors(Request_Text,Shells) for Shells in Strings_Shells):
-                                    print("[Shell-Scanner] - {} {} [Shelled!]").format(url,fg,_FirstFilePhP)
+                                    print("[Shell-Scanner] - {} {} [W00T!]").format(url,FG,_FirstFilePhP)
                                     open('Results/Shells.txt','a').write(url + _FirstFilePhP + "\n")
                                     exit()
-                                    
                                 elif any(ups in Check_Backdoors(Request_Text,ups) for ups in Strings_Uploads):
-                                    print("[Shell-Scanner] - {} {} [Uploaders!]").format(url,fg,_FirstFilePhP)
+                                    print("[Shell-Scanner] - {} {} [W00T!]").format(url,FG,_FirstFilePhP)
                                     open('Results/Uploaders.txt','a').write(url + _FirstFilePhP + "\n")
                                     exit()
                                 
                                 else:
-                                    print("[Shell-Scanner] - {} {} [Success!]").format(url,fg,_FirstFilePhP)
+                                    print("[Shell-Scanner] - {} {} [W00T!]").format(url,FG,_FirstFilePhP)
                                     open('Results/Success.txt','a').write(url + _FirstFilePhP + "\n")
                                     exit()
 
                             else:
-                                print("[Shell-Scanner] - {} {} [Not Found!]").format(url,fr,_FirstFilePhP)
+                                print("[Shell-Scanner] - {} {} [Not Found!]").format(url,FR,_FirstFilePhP)
                         if(Extract_Folders(MyDir)):
 
                             contents2 = Send_Request(url,Path +"/"+ MyDir).content
@@ -257,26 +251,25 @@ def Exploiter(site,Dirctorys):
                                         Request_Text = Send_Request(url,_NextFilePhP)
                                         if any(Sign in Check_Backdoors(Request_Text,Sign) for Sign in Signs):
                                             if any(Shells in Check_Backdoors(Request_Text,Shells) for Shells in Strings_Shells):
-                                                print("[Shell-Scanner] - {} {} [Shelled!]").format(url,fg,_NextFilePhP)
+                                                print("[Shell-Scanner] - {} {} [W00T!]").format(url,FG,_NextFilePhP)
                                                 open('Results/Shells.txt','a').write(url + _NextFilePhP + "\n")
                                                 exit()
-                                                
                                             elif any(ups in Check_Backdoors(Request_Text,ups) for ups in Strings_Uploads):
-                                                print("[Shell-Scanner] - {} {} [Uploaders!]").format(url,fg,_NextFilePhP)
+                                                print("[Shell-Scanner] - {} {} [W00T!]").format(url,FG,_NextFilePhP)
                                                 open('Results/Uploaders.txt','a').write(url + _NextFilePhP + "\n")
                                                 exit()
                                             
                                             else:
-                                                print("[Shell-Scanner] - {} {} [Success!]").format(url,fg,_NextFilePhP)
+                                                print("[Shell-Scanner] - {} {} [W00T!]").format(url,FG,_NextFilePhP)
                                                 open('Results/Success.txt','a').write(url + _NextFilePhP + "\n")
                                                 exit()
                                                 
                                         else:
-                                            print("[Shell-Scanner] - {} {} [Not Found!]").format(url,fr,_NextFilePhP)
+                                            print("[Shell-Scanner] - {} {} [Not Found!]").format(url,FR,_NextFilePhP)
                                             
                                             
             else:
-                print("[Shell-Scanner] - {} {} [Not Found!]").format(url,fr,Path)
+                print("[Shell-Scanner] - {} {} [Not Found!]").format(url,FR,Path)
                 
     except :
         pass
@@ -295,7 +288,6 @@ def CmsCheckers(site):
         pass
 
 
-    
 mp = Pool(100)
 mp.map(CmsCheckers, target)
 mp.close()

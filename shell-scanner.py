@@ -7,9 +7,11 @@ import re
 import colorama
 import requests
 import urllib3
-from multiprocessing.dummy import Pool
-from sys import stdout
-from colorama import Fore, init
+
+FRom multiprocessing.dummy import Pool
+FRom sys import stdout
+FRom colorama import Fore, init
+
 init(autoreset=True)
 delete_warning = urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -24,8 +26,8 @@ MEOW = 'Results'
 
 if not os.path.exists(MEOW):
     os.mkdir(MEOW)
-    
-    
+
+
 def banners():
     os.system('clear' if os.name == 'posix' else 'cls')
     stdout.write("                                                                                         \n")
@@ -48,15 +50,22 @@ def banners():
 banners()
 
 
+
 filename = raw_input("\n" + Fore.RED + "[+] " + Fore.YELLOW + "IP/DOMAIN LIST: " + Fore.WHITE)
 try:
     target = [i.strip() for i in open(filename, mode='r').readlines()]
 except FileNotFoundError:
     exit('[!] File not found: ' + filename)
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
 with open('Wordlist/Shell-Strings.txt', 'r') as f1, open('Wordlist/Shell-Strings.txt', 'r') as f2, open('Wordlist/Other-Strings.txt', 'r') as f3, open('Wordlist/Traversals.txt', 'r') as f4, open('Wordlist/Trusted-Files.txt', 'r') as f5, open('Wordlist/User-Agents.txt', 'r') as f:
     Signs = f1.read().splitlines()
     Strings_Shells = f2.read().splitlines()
@@ -64,7 +73,7 @@ with open('Wordlist/Shell-Strings.txt', 'r') as f1, open('Wordlist/Shell-Strings
     Locations = f4.read().splitlines()
     TrustedFiles = f5.read().splitlines()
     user_agents = [line.strip() for line in f.readlines()]
-    
+
 headers = {
     'User-Agent': random.choice(user_agents),
     'Content-type': '*/*',
@@ -281,15 +290,19 @@ def CmsCheckers(site):
     try:
         
         
+        
+        
         Exploiter(site,Locations)
     
 
+        
+        
         
     except:
         pass
 
 
-mp = Pool(100)
+mp = Pool(70)
 mp.map(CmsCheckers, target)
 mp.close()
 mp.join()

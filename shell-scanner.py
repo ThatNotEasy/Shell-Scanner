@@ -7,11 +7,9 @@ import re
 import colorama
 import requests
 import urllib3
-
-FRom multiprocessing.dummy import Pool
-FRom sys import stdout
-FRom colorama import Fore, init
-
+from multiprocessing.dummy import Pool
+from sys import stdout
+from colorama import Fore, init
 init(autoreset=True)
 delete_warning = urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 

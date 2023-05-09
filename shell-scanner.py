@@ -277,7 +277,7 @@ def Exploiter(site,Dirctorys):
                                             
                                             
             else:
-                print(FY + "[Shell-Scanner] - {} {} [Not Found!]").format(url,FR,Path)
+                print(FY + "[Shell-Scanner] -" + FR + "[Not Found!]" + FW + " {}".format(url))
                 
     except :
         pass

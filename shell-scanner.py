@@ -228,21 +228,21 @@ def Exploiter(site,Dirctorys):
 
                             if any(Sign in Check_Backdoors(Request_Text,Sign) for Sign in Signs):
                                 if any(Shells in Check_Backdoors(Request_Text,Shells) for Shells in Strings_Shells):
-                                    print(FY + "[Shell-Scanner] -" + FG + "[W00T!]" + FW + " {}".format(url))
+                                    print("[Shell-Scanner] - [W00T!] - {} {}").format(FW,url,FG,_FirstFilePhP)
                                     open('Results/Shells.txt','a').write(url + _FirstFilePhP + "\n")
                                     exit()
                                 elif any(ups in Check_Backdoors(Request_Text,ups) for ups in Strings_Uploads):
-                                    print(FY + "[Shell-Scanner] -" + FG + "[W00T!]" + FW + " {}".format(url))
+                                    print("[Shell-Scanner] - [W00T!] - {} {}").format(FW,url,FG,_FirstFilePhP)
                                     open('Results/Uploaders.txt','a').write(url + _FirstFilePhP + "\n")
                                     exit()
                                 
                                 else:
-                                    print(FY + "[Shell-Scanner] -" + FG + "[W00T!]" + FW + " {}".format(url))
+                                    print("[Shell-Scanner] - [W00T!] - {} {}").format(FW,url,FG,_FirstFilePhP)
                                     open('Results/Success.txt','a').write(url + _FirstFilePhP + "\n")
                                     exit()
 
                             else:
-                                print(FY + "[Shell-Scanner] -" + FR + "[Not Found!]" + FW + " {}".format(url))
+                                print("[Shell-Scanner] - [Not Found!] - {} {}").format(FW,url,FR,_FirstFilePhP)
                         if(Extract_Folders(MyDir)):
 
                             contents2 = Send_Request(url,Path +"/"+ MyDir).content
@@ -259,25 +259,25 @@ def Exploiter(site,Dirctorys):
                                         Request_Text = Send_Request(url,_NextFilePhP)
                                         if any(Sign in Check_Backdoors(Request_Text,Sign) for Sign in Signs):
                                             if any(Shells in Check_Backdoors(Request_Text,Shells) for Shells in Strings_Shells):
-                                                print(FY + "[Shell-Scanner] -" + FG + "[W00T!]" + FW + " {}".format(url))
+                                                print("[Shell-Scanner] - [W00T!] - {} {}").format(FW,url,FG,_NextFilePhP)
                                                 open('Results/Shells.txt','a').write(url + _NextFilePhP + "\n")
                                                 exit()
                                             elif any(ups in Check_Backdoors(Request_Text,ups) for ups in Strings_Uploads):
-                                                print(FY + "[Shell-Scanner] -" + FG + "[W00T!]" + FW + " {}".format(url))
+                                                print("[Shell-Scanner] - [W00T!] - {} {}").format(FW,url,FG,_NextFilePhP)
                                                 open('Results/Uploaders.txt','a').write(url + _NextFilePhP + "\n")
                                                 exit()
                                             
                                             else:
-                                                print(FY + "[Shell-Scanner] -" + FG + "[W00T!]" + FW + " {}".format(url))
+                                                print("[Shell-Scanner] - [W00T!] - {} {}").format(FW,url,FG,_NextFilePhP)
                                                 open('Results/Success.txt','a').write(url + _NextFilePhP + "\n")
                                                 exit()
                                                 
                                         else:
-                                            print(FY + "[Shell-Scanner] -" + FR + "[Not Found!]" + FW + " {}".format(url))
+                                            print("[Shell-Scanner] - [Not Found!] - {} {}").format(FW,url,FR,_NextFilePhP)
                                             
                                             
             else:
-                print(FY + "[Shell-Scanner] -" + FR + "[Not Found!]" + FW + " {}".format(url))
+                print("[Shell-Scanner] - [Not Found!] - {} {}").format(FW,url,FR,Path)
                 
     except :
         pass

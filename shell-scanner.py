@@ -26,15 +26,6 @@ if not os.path.exists(MEOW):
     os.mkdir(MEOW)
     
     
-headers = {
-    'User-Agent': random.choice(user_agents),
-    'Content-type': '*/*',
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-    'Accept-Language': 'en-US,en;q=0.5',
-    'Connection': 'keep-alive'
-}
-
-
 def banners():
     os.system('clear' if os.name == 'posix' else 'cls')
     stdout.write("                                                                                         \n")
@@ -73,6 +64,16 @@ with open('Wordlist/Shell-Strings.txt', 'r') as f1, open('Wordlist/Shell-Strings
     Locations = f4.read().splitlines()
     TrustedFiles = f5.read().splitlines()
     user_agents = [line.strip() for line in f.readlines()]
+    
+headers = {
+    'User-Agent': random.choice(user_agents),
+    'Content-type': '*/*',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language': 'en-US,en;q=0.5',
+    'Connection': 'keep-alive'
+}
+
+
 def URLdomain(site):
     if site.startswith("http://") :
         site = site.replace("http://","")

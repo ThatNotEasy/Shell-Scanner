@@ -28,4 +28,3 @@ $ python/python2 shell-scanner.py
 ## Contacts
 [![Telegram](https://img.shields.io/badge/-Telegram-blue)](https://telegram.me/SurpriseMTFK)
 [![Discord](https://img.shields.io/badge/-Discord-purple)](https://discordapp.com/users/829404192585678858)
-[![Forum](https://img.shields.io/badge/-Forum-red)](https://dragonforce.io/members/pari-malam.252/)
